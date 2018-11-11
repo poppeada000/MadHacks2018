@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
+def startCam():
 cap = cv2.VideoCapture(1)
 
 bgdModel = np.zeros((1,65),np.float64)
@@ -22,11 +23,9 @@ while True:
     for i in range(4):
         return_value, image = cap.read()
         cv2.imwrite('opencv'+str(i)+'.jpg',image)
-
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
-
-
 cap.release()
 cv2.destroyAllWindows()
+
+return
