@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import car_recgonition
+import CameraDisplay
 import Clarifmain
 
-car_recgonition.startCam()
+CameraDisplay.startCam()
 
 Clarifmain.getSoda()
