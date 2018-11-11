@@ -15,6 +15,7 @@ def getSoda():
 	image = ClImage(file_obj=open('opencv0.jpg', 'rb'))
 	response=model.predict([image])
 	concepts = response['outputs'][0]['data']['concepts']
+
 	for concept in concepts:
     		print(concept['name'], concept['value'])
 
